@@ -13,22 +13,33 @@ btns.forEach((btn) => {
             startCountDown = true;
            
             const timer = setInterval(function() {
-                count--;    
-                value.textContent = count;
-                if(count > 15){
-                    value.style.color = "green"
-                }
-                if (count <= 15){
-                     value.style.color = "red"
-                }
-                if (count === 0) {
-                    value.style.color = "black"
-                    clearInterval(timer);
-                    startCountDown = false;
+                if (startCountDown) {
+                    count--;    
+                    value.textContent = count;
+                    if(count > 15){
+                        value.style.color = "green"
+                    }
+                    if (count <= 15){
+                         value.style.color = "red"
+                    }
+                    if (count === 0) {
+                        value.style.color = "black"
+                        clearInterval(timer);
+                        startCountDown = false;
+                    }
                 }
             }, 1000);
+        }  
+        
+        if(styles.contains('reset-countdown') && startCountDown){
+            const timer = setInterval(function() {
+                clearInterval(timer);
+                startCountDown = false;
+                count = 30;
+                value.textContent = count;
+                value.style.color = "black"
+            });
             
-          
         }
     });
 });

@@ -7,6 +7,7 @@ const btns = document.querySelectorAll('.btn');
 btns.forEach((btn) => {
     console.log(btn)
     btn.addEventListener('click', (e) => {
+        
         const styles = e.currentTarget.classList
         if(styles.contains('start-countdown') && !startCountDown){
             count=30;

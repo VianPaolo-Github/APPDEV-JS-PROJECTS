@@ -1,3 +1,6 @@
+
+
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -24,15 +27,22 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
   place-items: center;
+  background-color: rgb(46, 46, 46);
+  display: flexbox;
   min-width: 320px;
   min-height: 100vh;
+  /*place-items: center;
+  */
 }
 
 h1 {
+  place-items: center;
   font-size: 3.2em;
   line-height: 1.1;
+  color:#f9f9f9;
+  text-align: center;
+  padding: 0.6em 1.2em;
 }
 
 button {
@@ -90,4 +100,13 @@ button:focus-visible {
   margin-bottom: 10px;
 }
 
+/* .nav {
+  background-color:#333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 1rem;
+} */
 

@@ -1,9 +1,9 @@
 
 import { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import img1 from './assets/Superportal.webp';
-import img2 from './assets/d58vm5g-e5168ea1-5892-4305-b416-995811172672.jpg';
-import img3 from './assets/Combine_Homeworld.webp';
+import img1 from './assets/Superportal.png';
+import img2 from './assets/Combine_Homeworld_2.png';
+import img3 from './assets/Combine_Homeworld.png';
 
 
 

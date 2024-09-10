@@ -7,6 +7,9 @@ import ItemCard from './ItemCard';
 import Image from 'react-bootstrap/Image';
 import React from 'react';
 import profilePic from './assets/profile-pic.png';
+import webDesign from './assets/web-design.png';
+import neuralNetworks from './assets/neural-networks.jpg';
+import gameDev from './assets/game-dev.png';
 
 export default function Body (){
   //used to pass info to functional components
@@ -21,9 +24,9 @@ export default function Body (){
 
         <p class = "p-sized">My works!</p>
         <div className="d-flex justify-content-around mb-5"> 
-          <ItemCard title="Web design" desc="Here are my react projects I made with Javascript" link = "JSPROJECTS\projects-directory\index.html"/>
-          <ItemCard title="Neural Network models" desc="These are my neural network models I trained" />
-          <ItemCard title="Experimental games" desc="I plan to add more than just an experimental space shooter" />
+          <ItemCard title="Web design" desc="Here are my react projects I made with Javascript" img={webDesign} link = "JSPROJECTS\projects-directory\index.html"/>
+          <ItemCard title="Neural Network models" desc="These are my neural network models I trained" img={neuralNetworks}/>
+          <ItemCard title="Experimental games" desc="I plan to add more than just an experimental space shooter" img={gameDev}/>
         </div>
 
         <p>Contact me! monocfyre@gmail.com</p>

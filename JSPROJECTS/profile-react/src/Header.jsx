@@ -2,6 +2,8 @@
 import { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import img1 from './assets/Superportal.webp';
+import img2 from './assets/d58vm5g-e5168ea1-5892-4305-b416-995811172672.jpg';
+import img3 from './assets/Combine_Homeworld.webp';
 
 
 
@@ -19,7 +21,7 @@ export default function Header (){
       <>
       <header>
 
-      <Carousel activeIndex={index} onSelect={handleSelect}>
+      <Carousel className="carousel-object" activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
         <img
           className="d-block w-100"
@@ -27,29 +29,29 @@ export default function Header (){
           alt="First slide"
         />
         <Carousel.Caption>
-          <h5>First slide label</h5>
+          <h2 animation="glow">First slide label</h2>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={img1}
+          src={img2}
           alt="Second slide"
         />
         <Carousel.Caption>
-          <h5>Second slide label</h5>
+          <h2 animation="glow">Second slide label</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={img1}
+          src={img3}
           alt="Third slide"
         />
         <Carousel.Caption>
-          <h5>Third slide label</h5>
+          <h2 animation="glow">Third slide label</h2>
           <p>
             Praesent commodo cursus magna, vel scelerisque nisl consectetur.
           </p>

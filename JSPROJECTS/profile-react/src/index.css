@@ -26,17 +26,21 @@ a:hover {
 }
 
 body {
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   place-items: center;
   background-color: rgb(46, 46, 46);
   display: flexbox;
   min-width: 320px;
   min-height: 100vh;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.87);
   /*place-items: center;
   */
 }
 
 h1 {
+  font-family: Arial, Helvetica, sans-serif;
   place-items: center;
   font-size: 3.2em;
   line-height: 1.1;
@@ -98,6 +102,19 @@ button:focus-visible {
   max-height: auto;
   border-radius: 50%;
   margin-bottom: 10px;
+  place-items: center;
+  text-align: center;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.p-sized {
+  font-size: 50px;
+}
+
+.carousel-object {
+  min-height: 110vh;
 }
 
 /* .nav {

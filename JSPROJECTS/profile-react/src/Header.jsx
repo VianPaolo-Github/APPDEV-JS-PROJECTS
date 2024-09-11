@@ -29,8 +29,8 @@ export default function Header (){
           alt="First slide"
         />
         <Carousel.Caption>
-          <h2 animation="glow">First slide label</h2>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h2 animation="glow">I am the first image</h2>
+          <p>This was from half life 2.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -40,8 +40,8 @@ export default function Header (){
           alt="Second slide"
         />
         <Carousel.Caption>
-          <h2 animation="glow">Second slide label</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h2 animation="glow">I'm the second image</h2>
+          <p>I like chezbagaz.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -51,9 +51,9 @@ export default function Header (){
           alt="Third slide"
         />
         <Carousel.Caption>
-          <h2 animation="glow">Third slide label</h2>
+          <h2 animation="glow">I'm the third image</h2>
           <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+            My developer has problems with working fast
           </p>
         </Carousel.Caption>
       </Carousel.Item>

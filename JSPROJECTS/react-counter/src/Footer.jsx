@@ -7,7 +7,7 @@ export default function Footer(){
             <p>
                 &copy;
                 {new Date().
-                getFullYear()} My Color Picker Website ||
+                getFullYear()} My Counter Website ||
                 Written by: Vian Paolo P. Palacio
             </p>
         </footer>

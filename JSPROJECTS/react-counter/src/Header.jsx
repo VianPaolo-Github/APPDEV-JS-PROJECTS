@@ -3,7 +3,7 @@ export default function Header(){
         <>
         <header>
             <hr />
-            <h1><center>My Color Picker: A Web App</center></h1>
+            <h1><center>My Counter: A Web App</center></h1>
         </header>
         </>
     )

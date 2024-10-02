@@ -1,6 +1,6 @@
 import Footer from './Footer'
 import Header from './Header'
-import ColorPicker from './ColorPicker'
+import RandomQuote from './RandomQuote/RandomQuote'
 
 
 
@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <Header />
-      <ColorPicker />
+      <RandomQuote />
       <Footer />
     </>
   )

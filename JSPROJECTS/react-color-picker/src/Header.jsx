@@ -1,9 +1,11 @@
+import './RandomQuote/RandomQuote.css'
+
 export default function Header(){
     return (
         <>
         <header>
             <hr />
-            <h1><center>My Color Picker: A Web App</center></h1>
+            <h1 className = "author"><center>My Quote Generator: A Web App</center></h1>
         </header>
         </>
     )

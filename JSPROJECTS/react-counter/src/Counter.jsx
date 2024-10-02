@@ -7,10 +7,6 @@ export default function Counter() {
         setCount(c => c + 1)
     }
 
-    /* const getCounter = () => {
-        setCounter(c => c+ 1)
-    } */
-
     const resetCount = () => {
         setCounter(c => c = 0)
     }

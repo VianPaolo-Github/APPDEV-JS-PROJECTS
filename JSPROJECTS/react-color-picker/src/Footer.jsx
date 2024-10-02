@@ -1,8 +1,10 @@
+import './RandomQuote/RandomQuote.css'
+
 export default function Footer(){
     return(
         <>
         <hr />
-        <footer>
+        <footer className = "author">
             <hr/>
             <p>
                 &copy;

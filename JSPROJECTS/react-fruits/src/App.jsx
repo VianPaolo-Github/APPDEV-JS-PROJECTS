@@ -17,6 +17,8 @@ function App() {
     {id: 3, name: "pie", color: "green"},
   ]
 
+  //fruits.sort((a, b)=> a.name.localeCompare(b.name))
+  //const redFruits = fruits.filter(fruit => fruit.color === "red")
   return (
     <>
       <Header/>

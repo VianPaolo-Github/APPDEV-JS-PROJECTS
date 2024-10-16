@@ -21,7 +21,7 @@ const Layout = () => {
               height="30"
               className="d-inline-block align-top"
             />
-            Team Cyclone
+            Cyclone inc.
         </Navbar.Brand>
         
 

@@ -88,13 +88,7 @@
     background-color: lavender; /* Change active item color */
     color: rgb(17, 24, 83); /* Change text color for active item */
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-  }
-  
-
-  
-  
-
-    
+  }  
   
   .pokemon-row {
     cursor: pointer;
@@ -117,5 +111,33 @@
   
   .pokemon-sprite {
     border-radius: 5px; /* Rounded corners for sprite images */
+  }
+  
+
+  .evolution-chain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .evolution {
+    text-align: center;
+    margin: 10px;
+  }
+  
+  .evolution-sprite {
+    width: 80px; /* Adjust size as needed */
+    margin: 10px 0;
+  }
+  
+  .evolution-line {
+    display: flex;
+    align-items: center;
+  }
+  
+  .arrow {
+    margin: 0 10px;
+    font-size: 1.5rem; /* Adjust size as needed */
   }
   

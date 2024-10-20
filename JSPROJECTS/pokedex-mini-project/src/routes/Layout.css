@@ -1,0 +1,33 @@
+.navbar-custom {
+    background-color: var(--navbar-color); /* Use your custom color variable */
+    transition: background-color 0.3s ease;
+  }
+  
+  .title-brand {
+    display: flex;
+    align-items: center; /* Align logo and text vertically */
+    font-weight: 600; /* Bold text */
+  }
+  
+  .title-brand img {
+    margin-right: 10px; /* Spacing between logo and text */
+  }
+  
+  .header-navigation-wrapper .nav-link {
+    color: var(--text-color); /* Light text color */
+    margin: 0 15px; /* Spacing between links */
+    transition: color 0.3s;
+  }
+  
+  .header-navigation-wrapper .nav-link:hover {
+    color: var(--primary-color); /* Lightning blue on hover */
+  }
+  
+  .navbar-toggler {
+    border-color: #00bfff; /* Set the border color for the toggle button */
+  }
+  
+  .navbar-toggler-icon {
+    background-color: #00bfff; /* Set the toggle icon color */
+  }
+  

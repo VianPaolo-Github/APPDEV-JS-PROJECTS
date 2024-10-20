@@ -1,0 +1,38 @@
+.about-container {
+    background-color:  #020917;
+    color: var(--text-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    margin: 80px auto; /* Center the container */
+    text-align: justify; /* Justify text for better readability */
+  }
+  
+  .about-title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    text-align: center;
+  }
+  
+  .about-lore {
+    line-height: 1.6;
+    margin: 15px 0;
+  }
+  
+  .about-lore.warning {
+    font-weight: bold;
+    color: #ff4500; /* Orange for emphasis */
+  }
+  
+  .about-footer {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .team-logo {
+    width: 100px; /* Set the size of the logo */
+    margin-bottom: 10px;
+  }
+  

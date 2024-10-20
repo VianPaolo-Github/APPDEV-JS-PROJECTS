@@ -1,0 +1,35 @@
+.join-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #020917;
+    color: #f1f1f1;
+    padding: 40px;
+    min-height: 100vh;
+  }
+  
+  .join-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #00bfff; /* Lightning blue */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  .join-message {
+    font-size: 1.25rem;
+    margin: 10px 0;
+    max-width: 800px;
+    text-align: center;
+  }
+  
+  .join-footer {
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  .join-logo {
+    max-width: 200px;
+    margin-bottom: 10px;
+  }
+  

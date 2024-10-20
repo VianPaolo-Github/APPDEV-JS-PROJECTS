@@ -1,0 +1,121 @@
+  .pokedex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-top: 80px; 
+  
+    background-color: #282c34;
+    color: #fff;
+    padding: 20px;
+    min-height: 100vh; /* Ensure the container takes full height */
+  }
+  
+  .card-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+  }
+  
+  .pokemon-sprite {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  .type-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center badges */
+  }
+  
+  .type-badge {
+    background-color: #7f7fff; /* Default badge color */
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 5px;
+  }
+  
+  .type-badge.fire { background-color: #ff7f00; }
+  .type-badge.water { background-color: #007fff; }
+  .type-badge.grass { background-color: #00ff7f; }
+  /* Add more type-specific styles as needed */
+  
+  .loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }
+  
+  .text-light-purple {
+    color: #d1c4e9; /* Light purple */
+  }
+  
+  .spinner-border.text-purple {
+    border-color: #673ab7; /* Purple */
+  }
+  
+  .pagination-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .pagination-container .pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .pagination-container .pagination .page-item {
+    margin-right: 10px;
+    background-color: rgb(70, 156, 255); /* or lavender */
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    padding: 10px 15px;
+    color:aliceblue;
+    margin: 0 5px; /* Add some space between items */
+  }
+
+  .pagination-container .pagination .page-item:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(48, 37, 169, 0.8);
+    transform: scale(1.05); /* Slightly enlarge the item on hover */
+  }
+
+  .pagination-container .pagination .page-item.active {
+    background-color: lavender; /* Change active item color */
+    color: rgb(17, 24, 83); /* Change text color for active item */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  }
+  
+
+  
+  
+
+    
+  
+  .pokemon-row {
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth hover effect */
+  }
+  
+  .pokemon-row:hover {
+    background-color: rgba(177, 236, 255, 0.998); /* Light blue background on hover */
+    color: #0a162e;
+    
+  }
+  
+  .type-badge {
+    margin: 3px; 
+    background-color: var(--badge-bg-color); /* Light blue badge background */
+    color: var(--primary-color); /* Lightning blue text */
+    padding: 5px 10px; 
+    border-radius: 5px; /* Rounded badge */
+  }
+  
+  .pokemon-sprite {
+    border-radius: 5px; /* Rounded corners for sprite images */
+  }
+  

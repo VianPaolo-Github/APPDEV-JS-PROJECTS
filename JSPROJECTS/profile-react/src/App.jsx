@@ -11,10 +11,6 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
-
-
-
-
 function App (){
  
 
@@ -32,13 +28,8 @@ function App (){
           </Nav>
         </Container>
       </Navbar>
-    
-      
-      
       
       <Header />
-
-
 
       <Body />
       <Footer /> {/*this works*/}

@@ -1,43 +1,78 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  --primary-color: #00bfff; /* Lightning blue */
+  --background-color: #1b1f36; /* Dark background */
+  --navbar-color: #282A35; /* Navbar background */
+  --text-color: #f1f1f1; /* Light text color */
+  --card-bg-color: #2a2a2a; /* Card background */
+  --badge-bg-color: rgba(0, 191, 255, 0.2); /* Light blue badge background */
 }
 
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  flex-direction: column;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #1b1f36;
-  color: #747bff;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Poppins', sans-serif;
+}
+
+nav {
+  position: fixed;
+  background-color: var(--navbar-color);
+  color: var(--text-color);
+  padding: 10px 0; 
+  width: 100%;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  z-index: 2; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+}
+
+nav .header-navigation-wrapper {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  width: 100%;
+}
+
+.pokedex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  margin-top: 80px; 
+}
+
+.pokemon-card {
+  margin: 10px; 
+  background-color: var(--card-bg-color);
+  border: 2px solid var(--primary-color); /* Lightning blue border */
+  border-radius: 8px; /* Rounded corners */
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effects */
+}
+
+.pokemon-card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 4px 15px rgba(0, 191, 255, 0.5); /* Blue shadow on hover */
+}
+
+.type-badge {
+  margin: 3px; 
+  background-color: var(--badge-bg-color); /* Light blue badge background */
+  color: var(--primary-color); /* Lightning blue text */
+  padding: 5px 10px; 
+  border-radius: 5px; /* Rounded badge */
 }
 
 h1 {
   margin: auto;
   width: 100%;
   padding: 15px;
-  border: 3px;
   text-align: center;
+  color: var(--primary-color); /* Lightning blue title */
 }
 
 button {
@@ -46,76 +81,28 @@ button {
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--primary-color);
+  color: #ffffff; /* White text for buttons */
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: background-color 0.3s, border-color 0.3s;
 }
 button:hover {
-  border-color: #646cff;
+  background-color: #0080ff; /* Darker blue on hover */
+  border-color: var(--primary-color);
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 4px auto var(--primary-color);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+@media (min-width: 768px) {
+  .pokemon-card {
+    width: 100%; 
   }
 }
 
-nav {
-  position: fixed;
-  background-color: #282A35;
-  color: #f1f1f1;
-  padding: 0;
-  letter-spacing: 1px;
-  font-family: 'Source Sans Pro Topnav', sans-serif;
-  font-size: 24px;
-  top: 0px;
-  z-index: 2;
-  width: 100%;
-  white-space: nowrap;
-  overflow: auto;
-  scrollbar-width: none;
+@media (min-width: 1992px) {
+  .pokemon-card {
+    width: 100%; 
+  }
 }
-
-nav .navbar-brand {
-  text-align: center;
-}
-
-nav .header-titles-wrapper{
-  justify-content: center;
-  padding-left: 0;
-  text-align: left;
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  border: 20px;
-}
-
-nav .header-navigation-wrapper{
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-}
-
-.goto-react {
-  display: inline-block;
-    width: auto;
-    margin: 0 !important;
-    padding: 5px 15px 5px 15px !important;
-    font-size: 15px !important;
-    text-decoration: none;
-    line-height: 1.5;
-}
-

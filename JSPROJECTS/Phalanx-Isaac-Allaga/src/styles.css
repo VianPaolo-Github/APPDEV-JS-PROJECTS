@@ -1,0 +1,62 @@
+/*styles for header.jsx*/
+body {
+    padding-top: 60px;
+    background-color: #0D1B2A;
+}
+.header-container {
+    position: fixed;  
+    top: 0;           
+    width: 100%;      
+    z-index: 1030;    
+}
+.navbar {
+    background-color: #1B2631 !important;
+    padding: 5px 10px; 
+    font-size: larger;
+}
+
+.navbar .navbar-brand {
+    color: #E7CBA8 !important; 
+    font-size: 2rem; 
+}
+
+.navbar .nav-link {
+    color: #A0C1D6 !important;
+}
+
+.navbar .nav-link:hover {
+    color: #E7CBA8 !important; 
+}
+.navbar-toggler {
+    border-color: #E7CBA8;
+    background-color: #E7CBA8;
+}
+/*styles for homepage/index.jsx*/
+.banner {
+    width: 100vw; /* 100% of the viewport width */
+    height: 50vh; /* Adjust the height relative to the viewport */
+    position: relative;
+    overflow: hidden; /* To ensure content doesn't overflow */
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove padding */
+}
+.banner img {
+    width: 100%;
+    height: auto; /* Maintains aspect ratio */
+    object-fit: contain; /* Ensure the image is not cropped */
+  }
+.carousel-caption {
+    position: absolute; /* Absolute positioning inside the banner */
+    top: 50%; /* Center the caption vertically */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center horizontally and vertically */
+    color: white; /* Ensure text is visible */
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Transparent background for readability */
+    padding: 10px;
+    border-radius: 10px; /* Slightly rounded edges for better design */
+}
+
+  
+
+

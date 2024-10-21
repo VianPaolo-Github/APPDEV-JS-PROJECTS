@@ -26,9 +26,12 @@ const PokemonDetail = () => {
           ...pokemonRes.data,
           sprites: {
             current: animatedSprite,
-            evolution: evolutionRes.data.chain
+            evolution: []
           }
         });
+
+        // Fetch the evolution sprites
+        await fetchEvolutionChainSprites(evolutionRes.data.chain);
 
         setLoading(false);
 
@@ -45,40 +48,48 @@ const PokemonDetail = () => {
       }
     };
 
+    const fetchEvolutionChainSprites = async (evoChain) => {
+      const ids = [];
+
+      // Function to traverse the evolution chain and collect IDs
+      const collectIds = (evo) => {
+        ids.push(evo.species.url.split('/').slice(-2, -1)[0]); // Extract ID from URL
+        evo.evolves_to.forEach(collectIds);
+      };
+
+      collectIds(evoChain);
+
+      // Fetch animated sprites for all collected IDs
+      const sprites = await Promise.all(ids.map(id => fetchPokemonAnimatedSprite(id)));
+
+      // Update the state with the animated sprites
+      setPokemon(prev => ({
+        ...prev,
+        sprites: {
+          ...prev.sprites,
+          evolution: sprites.filter(sprite => sprite !== null) // Filter out any null results
+        }
+      }));
+    };
+
+    // Function to fetch a Pokémon's animated sprite
+    const fetchPokemonAnimatedSprite = async (id) => {
+      try {
+        const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`);
+        return {
+          name: res.data.name,
+          sprite: res.data.sprites.versions['generation-v']['black-white'].animated?.front_default || 
+                  res.data.sprites.front_default || 
+                  null
+        };
+      } catch (error) {
+        console.warn(`Error fetching sprite for ID ${id}:`, error);
+        return null; // Return null if there's an error
+      }
+    };
+
     fetchPokemonDetail();
   }, [id]);
-
-  const fetchEvolutionSprite = async (speciesUrl) => {
-    const speciesRes = await axios.get(speciesUrl);
-    return speciesRes.data.sprites.front_default; // Adjust if needed
-  };
-
-  const renderEvolutionChain = (evolution) => {
-    if (!evolution) return null;
-
-    return (
-      <div className="evolution-chain">
-        <div className="evolution">
-          <img 
-            src={fetchEvolutionSprite(evolution.species.url)} // Fetch the species for sprite
-            alt={evolution.species.name}
-            className="evolution-sprite"
-          />
-          <p className="text-capitalize">{evolution.species.name}</p>
-        </div>
-        {evolution.evolves_to.length > 0 && (
-          <div className="evolution-line">
-            {evolution.evolves_to.map((evo, index) => (
-              <React.Fragment key={index}>
-                {renderEvolutionChain(evo)}
-                {index < evolution.evolves_to.length - 1 && <span className="arrow">→</span>}
-              </React.Fragment>
-            ))}
-          </div>
-        )}
-      </div>
-    );
-  };
 
   if (loading || !pokemon) {
     return <div className="loading-spinner">Loading...</div>;
@@ -102,7 +113,7 @@ const PokemonDetail = () => {
                     <span>{stat.stat.name}: {stat.base_stat}</span>
                     <div 
                       className="stat-fill" 
-                      style={{width: `${(stat.base_stat / 255) * 100}%`}}
+                      style={{ width: `${(stat.base_stat / 255) * 100}%` }}
                     />
                   </div>
                 ))}
@@ -110,7 +121,21 @@ const PokemonDetail = () => {
             </Col>
             <Col md={6}>
               <h3>Evolution Chain</h3>
-              {renderEvolutionChain(pokemon.evolution)}
+              <div className="evolution-chain">
+                {pokemon.sprites.evolution.map((evo, index) => (
+                  <React.Fragment key={index}>
+                    <div className="evolution">
+                      <img 
+                        src={evo.sprite || 'path/to/fallback-image.png'} // Use a fallback image
+                        alt={evo.name} 
+                        className="evolution-sprite"
+                      />
+                      <p className="text-capitalize">{evo.name}</p>
+                    </div>
+                    {index < pokemon.sprites.evolution.length - 1 && <span className="arrow">→</span>}
+                  </React.Fragment>
+                ))}
+              </div>
             </Col>
           </Row>
           <button 

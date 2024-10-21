@@ -1,3 +1,87 @@
+body {
+  background-color: #0d1b2a; /* Dark Blue */
+  color: #f0f0f0; /* Light text color */
+}
+
+.pokemon-detail {
+  margin: 20px;
+}
+
+.detail-card {
+  background: linear-gradient(135deg, #1b1b2f, #4a4e69); /* Black to purplish */
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.detail-sprite {
+  width: 10%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.stats {
+  margin-top: 20px;
+}
+
+.stat-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.stat-fill {
+  height: 10px;
+  background-color: #3c5a99; /* Lightning Blue */
+  border-radius: 5px;
+  margin-left: 10px;
+  transition: width 0.5s ease;
+}
+
+.evolution-chain {
+  display: flex; /* Use flexbox for horizontal alignment */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  flex-wrap: nowrap; /* Prevent wrapping to the next line */
+}
+
+.evolution {
+  margin: 0 10px; /* Add space between each evolution */
+  text-align: center; /* Center text below the image */
+}
+
+.arrow {
+  font-size: 24px; /* Increase size for better visibility */
+  margin: 0 5px; /* Space around the arrow */
+}
+
+
+.evolution-sprite {
+  width: 50px;
+  height: auto;
+}
+
+
+.back-button {
+  margin-top: 20px;
+  background-color: #3c5a99; /* Lightning Blue */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #5c7dbe; /* Lighter Blue */
+}
+
+
+
+
+
+
   .pokedex-container {
     display: flex;
     flex-direction: column;
@@ -114,22 +198,8 @@
   }
   
 
-  .evolution-chain {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  .evolution {
-    text-align: center;
-    margin: 10px;
-  }
-  
-  .evolution-sprite {
-    width: 80px; /* Adjust size as needed */
-    margin: 10px 0;
-  }
+ 
+
   
   .evolution-line {
     display: flex;

@@ -35,13 +35,6 @@ const PokemonList = () => {
 
         setPokemon(detailedPokemon);
         setLoading(false);
-
-        anime({
-          targets: '.pokemon-row',
-          scale: [0, 1],
-          opacity: [0, 1],
-          delay: anime.stagger(50)
-        });
       } catch (error) {
         console.error("Error fetching Pokemon:", error);
         setLoading(false);
@@ -50,6 +43,18 @@ const PokemonList = () => {
 
     fetchPokemon();
   }, []);
+
+  // Animation effect when Pokémon data is updated
+  useEffect(() => {
+    if (!loading && pokemon.length > 0) {
+      anime({
+        targets: '.pokemon-row',
+        scale: [0, 1],
+        opacity: [0, 1],
+        delay: anime.stagger(50)
+      });
+    }
+  }, [loading, pokemon]);
 
   const totalPages = Math.ceil(pokemon.length / pokemonPerPage);
   const indexOfLastPokemon = currentPage * pokemonPerPage;
@@ -124,7 +129,6 @@ const PokemonList = () => {
                 disabled={currentPage === 1}
               />
 
-              {/* Show page numbers based on current page */}
               {Array.from({ length: totalPages }, (_, i) => i + 1)
                 .filter((number) => 
                   number === 1 || 

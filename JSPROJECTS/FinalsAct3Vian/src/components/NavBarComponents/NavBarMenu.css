@@ -1,0 +1,24 @@
+.custom-navbar {
+  background-color: #2d3135; /* Bootstrap primary color */
+  padding: 1rem; /* Padding around the navbar */
+  position: sticky; /* Make the navbar sticky */
+  top: 0; /* Stick it to the top */
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+.custom-navbar .nav-link {
+  color: white; /* Link color */
+  font-weight: bold; /* Make links bold */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+  margin-left: 20px; /* Add space between nav links */
+}
+
+.custom-navbar .nav-link:hover {
+  color: #ebca68; /* Change color on hover */
+}
+
+@media (max-width: 768px) {
+  .custom-navbar {
+    background-color: #0056b3; /* Darker shade for mobile view */
+  }
+}

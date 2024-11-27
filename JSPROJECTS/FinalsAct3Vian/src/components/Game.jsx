@@ -1,11 +1,16 @@
 import { useLocation } from "react-router-dom"
+
+
 export default function Game(){
     const location = useLocation();
     const game = location.state.game
     return(
-        <div>
+        <>
+            <div>
             <h1>{game.name}</h1>
+            <img src={game.picture} alt="Game"></img>
             <p>{game.description}</p>
-        </div>
+            </div>
+        </>
     )
 }

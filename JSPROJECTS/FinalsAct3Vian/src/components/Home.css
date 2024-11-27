@@ -1,0 +1,18 @@
+.home-banner {
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    text-align: center;
+    color: rgb(79, 82, 92);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.home-banner h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.home-banner p {
+    font-size: 1.5rem;
+}

@@ -5,6 +5,9 @@ import { useNavigate, Routes, Route } from 'react-router-dom';
 import anime from 'animejs';
 import PokemonDetail from './PokemonDetail';
 import './Pokedex.css';
+import axiosRetry from 'axios-retry';
+
+axiosRetry(axios, { retries: 3, retryDelay: axiosRetry.exponentialDelay });
 
 const PokemonList = () => {
   const [pokemon, setPokemon] = useState([]);
@@ -18,7 +21,7 @@ const PokemonList = () => {
       try {
         const response = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=1000`);
         const results = response.data.results;
-
+    
         const detailedPokemon = await Promise.all(
           results.map(async (p) => {
             const details = await axios.get(p.url);
@@ -32,7 +35,7 @@ const PokemonList = () => {
             };
           })
         );
-
+    
         setPokemon(detailedPokemon);
         setLoading(false);
       } catch (error) {
@@ -82,7 +85,7 @@ const PokemonList = () => {
           <Table striped bordered hover responsive className="w-100">
             <thead>
               <tr>
-                <th>#</th>
+                <th> </th>
                 <th>Name</th>
                 <th>Image</th>
                 <th>Types</th>

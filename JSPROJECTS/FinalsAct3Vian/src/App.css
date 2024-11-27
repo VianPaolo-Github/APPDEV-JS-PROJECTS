@@ -1,8 +1,82 @@
-.app-body{
-  width: 100%, 
-  position: 'center', 
-  top: 0, 
-  left: 0, 
-  zIndex: 9999
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
 }
 
+body {
+  background-color: #f0f0f0;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3 {
+  font-family: 'Arial', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  background-color: #333;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #444;
+}
+
+header, footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
+
+footer {
+  margin-top: auto;
+}
+
+.bg-cover {
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+
+/* Mobile-first responsive layout */
+@media (max-width: 768px) {
+  .game-card img {
+      max-width: 80%;
+  }
+  .game-list {
+      grid-template-columns: 1fr;
+  }
+}
